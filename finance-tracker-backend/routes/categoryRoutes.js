@@ -3,8 +3,11 @@ import { supabase } from "../db/supabase.js";
 
 const router = express.Router();
 
-router.get("/allCategories", async (req, res) => {
-  const { data, error } = await supabase.from("Category").select();
+router.get("/expenseCategories", async (req, res) => {
+  const { data, error } = await supabase
+    .from("Category")
+    .select()
+    .neq("category_name", "Income");
   if (error) {
     return res
       .status(404)

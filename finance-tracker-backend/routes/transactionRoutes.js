@@ -12,6 +12,7 @@ router.post("/transaction", async (req, res) => {
     'income': req.body.income,
     'category_id': req.body.category_id,
     'description': req.body.description,
+    'end_date': req.body.end_date
   };
 
   const { data, error } = await supabase

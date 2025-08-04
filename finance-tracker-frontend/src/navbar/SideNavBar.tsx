@@ -4,7 +4,7 @@ import NavBarItem from './NavbarItem';
 
 function SideNavBar() {
 
-  const [activeItem, setActiveItem] = useState('Dashboard');
+  const [activeItem, setActiveItem] = useState<string>('Dashboard');
 
   return (
     <div className='side-nav-container'>
